@@ -692,7 +692,7 @@ export default {
         if (!this.topazWorker) {
           try {
             this.topazWorker = new Worker(
-              new URL("/topaz/topaz.worker.js", import.meta.url)
+              new URL("/tiltak/tiltak.worker.js", import.meta.url)
             );
             this.topazWorker.onmessage = ({ data }) => {
               this.receiveTopazSuggestions(data);
